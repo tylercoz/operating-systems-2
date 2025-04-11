@@ -1,11 +1,14 @@
-CC=gcc
-CCOPTS=-Wall -Wextra
-
 reservations: reservations.c
-	$(CC) $(CCOPTS) -o $@ $^
+	gcc -Wall -Wextra -o $@ $^ -lpthread
+
+reservations.zip:
+	rm -f $@
+	zip $@ Makefile reservations.c
 
 debug: reservations.c
-	$(CC) $(CCOPTS) -g -o $@ $^
+	gcc -g -Wall -Wextra -o $@ $^ -lpthread
+
+.PHONY: clean
 
 clean:
 	rm -f reservations debug
