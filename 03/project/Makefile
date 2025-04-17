@@ -1,7 +1,9 @@
-pc: pc.c
-	gcc -Wall -Wextra -o $@ $^ -lpthread
+FLAGS = -Wall -Wextra -Werror
 
-debug: pc.c
+pc: pc.c eventbuf.c
+	gcc $(FLAGS) -o $@ $^
+
+debug: pc.c eventbuf.c
 	gcc -g -Wall -Wextra -o $@ $^ -lpthread
 
 .PHONY: clean
