@@ -36,6 +36,16 @@ Command line:
 
 * `eventbuf.c`:
 
+ * `eventbuf_create()`: make a new eventbuf
+
+ * `eventbuf_free()`: free previously-created eventbuf
+
+ * `eventbuf_add()`: add an event to the eventbuf
+
+ * `eventbuf_get()`: remove an event to the eventbuf
+
+ * `eventbuf_empty()`: true if there are no items in the eventbuf
+
 ## Notes
 
 * Waiting for event_buffer to be empty before cancelling consumer threads needs to be refactored. Currently unoptimal.
