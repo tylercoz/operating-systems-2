@@ -36,15 +36,15 @@ Command line:
 
 * `eventbuf.c`:
 
- * `eventbuf_create()`: make a new eventbuf
+  * `eventbuf_create()`: make a new eventbuf
 
- * `eventbuf_free()`: free previously-created eventbuf
+  * `eventbuf_free()`: free previously-created eventbuf
 
- * `eventbuf_add()`: add an event to the eventbuf
+  * `eventbuf_add()`: add an event to the eventbuf
 
- * `eventbuf_get()`: remove an event to the eventbuf
+  * `eventbuf_get()`: remove an event to the eventbuf
 
- * `eventbuf_empty()`: true if there are no items in the eventbuf
+  * `eventbuf_empty()`: true if there are no items in the eventbuf
 
 ## Notes
 
