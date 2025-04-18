@@ -10,12 +10,15 @@ Command line:
 
 ## Files
 
-* `pc.c`: Creates and joins producer and consumer threads to handle tasks.
-* `eventbuf.c`: Queue data structure.
+* `pc.c`:
+  * Creates and joins producer and consumer threads to handle tasks.
+* `eventbuf.c`:
+  * Queue data structure.
 
 ## Data
 
-* `pc.c`: `eventbuf` holds events. Shared between producer and consumer threads.
+* `pc.c`:
+  * `eventbuf` holds events. Shared between producer and consumer threads.
 
 ## Functions
 
