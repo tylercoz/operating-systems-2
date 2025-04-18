@@ -19,12 +19,19 @@ Command line:
 
 ## Functions
 
-`pc.c`:
-  `sem_open_temp()`: Handles opening, unlinking and closing semaphores.
-  `producer_event_number()`: Combines producer number with event number to output unique identifying number for tasks in the event buffer.
-  `produce()`: Concurrent thread function for adding events to the event buffer.
-  `consume()`: Concurrent thread function for removing events from the event buffer.
-  `main()`: Creates global event buffer, creates producer and consumer threads and cleans up event buffer, producer and consumer threads.
+* `pc.c`:
+
+  * `sem_open_temp()`: Handles opening, unlinking and closing semaphores.
+
+  * `producer_event_number()`: Combines producer number with event number to output unique identifying number for tasks in the event buffer.
+
+  * `produce()`: Concurrent thread function for adding events to the event buffer.
+
+  * `consume()`: Concurrent thread function for removing events from the event buffer.
+
+  * `main()`: Creates global event buffer, creates producer and consumer threads and cleans up event buffer, producer and consumer threads.
+
+* `eventbuf.c`:
 
 ## Notes
 
