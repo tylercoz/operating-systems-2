@@ -1,4 +1,4 @@
-# Mutexes
+# Producers and Consumers
 
 ## Building
 
@@ -48,4 +48,5 @@ Command line:
 
 ## Notes
 
-* Waiting for event_buffer to be empty before cancelling consumer threads needs to be refactored. Currently unoptimal.
+* `pc.c`
+  * Waiting for event_buffer to be empty before cancelling consumer threads needs to be refactored. Currently unoptimal.
