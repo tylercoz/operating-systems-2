@@ -10,16 +10,22 @@ Command line:
 
 ## Files
 
-TODO
+* `pc.c`: Creates and joins producer and consumer threads to handle tasks.
+* `eventbuf.c`: Queue data structure.
 
 ## Data
 
-TODO
+* `pc.c`: `eventbuf` holds events. Shared between producer and consumer threads.
 
 ## Functions
 
-TODO
+`pc.c`:
+  `sem_open_temp()`: Handles opening, unlinking and closing semaphores.
+  `producer_event_number()`: Combines producer number with event number to output unique identifying number for tasks in the event buffer.
+  `produce()`: Concurrent thread function for adding events to the event buffer.
+  `consume()`: Concurrent thread function for removing events from the event buffer.
+  `main()`: Creates global event buffer, creates producer and consumer threads and cleans up event buffer, producer and consumer threads.
 
 ## Notes
 
-TODO
+* Waiting for event_buffer to be empty before cancelling consumer threads needs to be refactored. Currently unoptimal.
