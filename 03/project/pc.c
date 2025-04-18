@@ -1,4 +1,3 @@
-// TODO consume all events before cancelling
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -116,7 +115,7 @@ int main(int argc, char *argv[]) {
 
   // Cancel Consumer Threads
   for (int i = 0; i < consumer_count; i++) {
-    pthread_cancel(consumers[i]); // TODO make sure that threads don't exit before completing work.
+    pthread_cancel(consumers[i]);
   }
 
   // Free the event buffer
